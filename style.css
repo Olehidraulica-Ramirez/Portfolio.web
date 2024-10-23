@@ -113,7 +113,7 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   font-size: var(--presentacion-titulo-tamanio);
   color: var(--color-primario);
   text-shadow: 2px 2px 2px var(--fondo-secundario);
-  /*  animation: cambiar-color 8s linear infinite alternate; */
+   animation: cambiar-color 8s linear infinite alternate; 
 }
 
 .presentacion__parrafo {
@@ -150,8 +150,6 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
     var(--color-primario-apagado) 10%,
     var(--fondo-primario) 55%
   );
-  /* eliminar en el video 3 */
-  height: max-content;
 }
 
 .articulo__titulo {
@@ -166,9 +164,8 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   gap: 2rem;
 }
 
-/* seccion descripcion */
 .seccion_descripcion {
-  /* position: relative; */
+  position: relative; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -183,14 +180,14 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   height: 230px;
   width: 200px;
   padding: 10px;
-  background-color: var(--texto-primario);
-  /*   background-color: transparent; */
+  background-color: transparent;
   cursor: pointer;
 }
+
 .seccion_descripcion__imagen {
   width: 100%;
   height: 200px;
-  /* width: 300px;
+ width: 300px;
   height: 300px;
   padding: 10px;
   padding-bottom: 50px;
@@ -198,19 +195,21 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   position: absolute;
   top: 40px;
   left: 50%;
-  transform: translateX(-50%); */
+  transform: translateX(-50%); 
   object-fit: cover;
-  /* transition: left 0.3s ease, right 0.3s ease, top 0.3s ease, bottom 0.3s ease,
+   transition: left 0.3s ease, right 0.3s ease, top 0.3s ease, bottom 0.3s ease,
     width 0.3s ease, height 0.3s ease, padding 0.3s ease,
     background-color 0.3s ease, transform 0.3s ease,
-    border-radius 0.1s 0.2s ease; */
+    border-radius 0.1s 0.2s ease;
 }
-/* .seccion_descripcion__imagen_variante {
+.seccion_descripcion__imagen_variante {
   top: auto;
   bottom: 40px;
 }
 
-.seccion_descripcion__imagen:hover {
+
+.seccion_descripcion__imagen:hover,
+.seccion_descripcion__imagen:focus {
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -220,10 +219,11 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   border-radius: 20px;
   transform: translateX(0);
 }
-.seccion_descripcion__imagen_variante:hover {
+.seccion_descripcion__imagen_variante:hover,
+.seccion_descripcion__imagen_variante:hover  {
   top: auto;
   bottom: 0;
-} */
+}
 
 .seccion_descripcion__info {
   display: flex;
