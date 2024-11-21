@@ -17,13 +17,34 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-  </head>
+  
+
+ <style>
+  .float-wa{
+      position:fixed;
+      width:60px;
+      height:60px;
+      bottom:40px;
+      right:40px;
+      background-color:#1d1717;
+      color:#FFF;
+      border-radius:50px;
+      text-align:center;
+      font-size:30px;
+      z-index:700;
+  }
+</style>
+
+
+</head>
+
   <body class="scroll">
+    
     <header class="encabezado">
       <nav class="navegacion">
         <a class="navegacion__enlace" href="#presentacion">
           <h2 class="navegacion__titulo">
-            Hola, Soy Cristian SOPLAN</h2>
+            Cristian SOPLAN</h2>
         </a>
         <ul class="enlaces">
           <li class="enlaces__item">
@@ -33,18 +54,20 @@
             <a class="enlaces__enlace" href="#sobre-mi">Sobre mi</a>
           </li>
           <li class="enlaces__item">
-            <a class="enlaces__enlace" href="#proyectos">Proyectos</a>
+            <a class="enlaces__enlace" href="#proyectos">Certificados</a>
           </li>
         </ul>
       </nav>
     </header>
+
         <main class="principal">
+
       <section class="presentacion" id="presentacion">
         <div class="presentacion__contenedor_info">
-          <h1 class="presentacion__titulo">Soy Desarrollador</h1>
+          <h1 class="presentacion__titulo">Desarrolladoro web </h1>
           <p class="presentacion__parrafo">
-            Git-github-node-npm-typescript-angulacli-springbot-scrum-apache-entre otros..
-        desarrollofulsrtack jr. front-end.back-end
+           Hola me llamo Cristian Soplan, estoy iniciando en el desarrollo web - Testing avanzado - Programacion.
+           Mi interes es crecer desarrollar apps y mas... 
           </p>
           <div class="presentacion__contenedor_botones">
             <a href="#sobre-mi" class="boton" role="button">Sobre mí</a>
@@ -57,7 +80,9 @@
             >
           </div>
         </div>
+
       </section>
+
       <article class="articulo sobre_mi" id="sobre-mi">
         <h2 class="articulo__titulo">Un poco sobre mi</h2>
         <div class="articulo__contenedor_descripciones">
@@ -150,9 +175,11 @@
             </div>
           </section>
         </div>
+
       </article>
+
       <article class="articulo proyectos" id="proyectos">
-        <h2 class="articulo__titulo">Mis proyectos</h2>
+        <h2 class="articulo__titulo">Mis Certificados</h2>
         <div class="contenedor_tarjetas_grid">
           <article
             class="tarjeta"
@@ -160,100 +187,211 @@
           >
             <img
               class="tarjeta__imagen"
-              src="./assets/images/proyectos/paisaje.png"
+              src="./assets/images/proyectos/capacitar.jpg"
               alt="imagen del proyecto"
               title="proyecto 1"
             />
             <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_1">Git-Github</h3>
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_1">P H M laboral</h3>
               <span class="tarjeta__divisor"></span>
               <p
                 class="tarjeta__parrafo scroll scroll_fino"
                 aria-label="descripcion de proyecto personal"
                 aria-describedby="titulo_proyecto_1"
-              >
-              Hub es una plataforma basada en la web que incorpora las características de control de versiones de git para que puedan ser utilizadas
-              </p>
-              <a href="#" class="boton boton_oscuro" target="_blank"
-                >Ver proyecto</a
+              > Trayecto formativo dictado por el Ministeri de economia de la Republica Argentina, en el 
+              marco del programa “Creando Capacidades Locales” en la provincia de Chaco junto a la 
+              secretaria de la pequeña y mediana empresa y Emprendedores,economia del conocimiento.
+             </p>
+              <a href="./assets/certificados/Potencia tus habilidades en el mundo laboral.pdf" class="boton boton_oscuro" target="_blank"
+                >Ver Certificado</a
               >
             </div>
           </article>
+
           <article
             class="tarjeta"
             aria-label="presentacion de proyecto personal"
           >
             <img
               class="tarjeta__imagen"
-              src="./assets/images/proyectos/juegos.jpg"
+              src="./assets/images/proyectos/came.jpg"
               alt="imagen del proyecto"
               title="proyecto 2"
             />
             <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_2">Pseint</h3>
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_2">Negociaciòn</h3>
               <span class="tarjeta__divisor"></span>
               <p
                 class="tarjeta__parrafo scroll scroll_fino scroll_gris"
                 aria-label="descripcion de proyecto personal"
                 aria-describedby="titulo_proyecto_2"
               >
-          Programacion y desarrollo de aplicacione en pseint.
+          Camra Argentina de comercio y servicios en colaboracion con INTERCONTACT y dep; desarrollo profesional.
               </p>
-              <a href="#" class="boton" target="_blank">Ver proyecto</a>
+              <a href="./assets/certificados/Negociaciòn.pdf" class="boton" target="_blank">Ver Certificado</a>
             </div>
           </article>
+
           <article
             class="tarjeta"
             aria-label="presentacion de proyecto personal"
           >
             <img
               class="tarjeta__imagen"
-              src="./assets/images/proyectos/calendario.png"
-              alt="imagen del proyecto"
-              title="proyecto 3"
-            />
-            <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_3">Typescript/Angular</h3>
-              <span class="tarjeta__divisor"></span>
-              <p
-                class="tarjeta__parrafo scroll scroll_fino"
-                aria-label="descripcion de proyecto personal"
-                aria-describedby="titulo_proyecto_3"
-              >
-              TypeScript es un lenguaje de programación, se puede decir que es un super JavaScript tipado.
-              </p>
-              <a href="#" class="boton boton_oscuro" target="_blank"
-                >Ver proyecto</a
-              >
-            </div>
-          </article>
-          <article
-            class="tarjeta"
-            aria-label="presentacion de proyecto personal"
-          >
-            <img
-              class="tarjeta__imagen"
-              src="./assets/images/proyectos/Mantis.png"
+              src="./assets/images/proyectos/came.jpg"
               alt="imagen del proyecto"
               title="proyecto 4"
             />
             <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_4">Mantisbugtrucker</h3>
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_4">Gestion de tiempo</h3>
               <span class="tarjeta__divisor"></span>
               <p
                 class="tarjeta__parrafo scroll scroll_fino scroll_gris"
                 aria-label="descripcion de proyecto personal"
                 aria-describedby="titulo_proyecto_4"
               >
-              Mantis Bug Tracker es un software que constituye una solución completa para gestionar tareas en un equipo de trabajo.
+              Cofederacion Argentina de la mediana empresa en colaboracion con dep. Desarrollo profesional. - "Gestion de tiempo".
               </p>
-              <a href="#" class="boton boton_oscuro" target="_blank">Ver proyecto</a>
+              <a href="./assets/certificados/Gestion de tiempo.pdf" class="boton boton_oscuro" target="_blank">Ver Certificados</a>
             </div>
           </article>
-          
+
+          <article
+            class="tarjeta"
+            aria-label="presentacion de proyecto personal"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/images/proyectos/came.jpg"
+              alt="imagen del proyecto"
+              title="proyecto 4"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_4">DHPP</h3>
+              <span class="tarjeta__divisor"></span>
+              <p
+                class="tarjeta__parrafo scroll scroll_fino scroll_gris"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_proyecto_4"
+              >
+              Cofederacion Argentina de la mediana empresa - CAME - "Desarrollo de habilidades personales y profesionales".
+              </p>
+              <a href="./assets/certificados/Desarrollo de habilidades personales y profesionales.pdf" class="boton boton_oscuro" target="_blank">Ver Certificados</a>
+            </div>
+          </article>
+
+          <article
+          class="tarjeta"
+          aria-label="presentacion de proyecto personal"
+        >
+          <img
+            class="tarjeta__imagen"
+            src="./assets/images/proyectos/arg.png"
+            alt="imagen del proyecto"
+            title="proyecto 4"
+          />
+          <div class="tarjeta__contenido">
+            <h3 class="tarjeta__titulo" id="titulo_proyecto_4">Argentina programa </h3>
+            <span class="tarjeta__divisor"></span>
+            <p
+              class="tarjeta__parrafo scroll scroll_fino scroll_gris"
+              aria-label="descripcion de proyecto personal"
+              aria-describedby="titulo_proyecto_4"
+            >
+            Primera etapa del plan Argentina progarama #Seprogramar. 
+            </p>
+            <a href="./assets/certificados/Titulos/argentina_programa_2022.pdf" class="boton boton_oscuro" target="_blank">Ver Titulo</a>
+          </div>
+        </article>
+
+        <article
+        class="tarjeta"
+        aria-label="presentacion de proyecto personal"
+      >
+        <img
+          class="tarjeta__imagen"
+          src="./assets/images/proyectos/images (1).png"
+          alt="imagen del proyecto"
+          title="proyecto 4"
+        />
+        <div class="tarjeta__contenido">
+          <h3 class="tarjeta__titulo" id="titulo_proyecto_4">Programaciòn</h3>
+          <span class="tarjeta__divisor"></span>
+          <p
+            class="tarjeta__parrafo scroll scroll_fino scroll_gris"
+            aria-label="descripcion de proyecto personal"
+            aria-describedby="titulo_proyecto_4"
+          >
+          Introduccion a la programaciòn y el pensamiento computacional en el marco de Argentina Programa 4.0 - Potenciar Argentina.
+          </p>
+          <a href="./assets/certificados/Titulos/Introducicion a la programacion y el pensamiento comp..pdf" class="boton boton_oscuro" target="_blank">Ver Titulo</a>
         </div>
       </article>
+        
+      <article
+      class="tarjeta"
+      aria-label="presentacion de proyecto personal"
+    >
+      <img
+        class="tarjeta__imagen"
+        src="./assets/images/proyectos/polo.png"
+        alt="imagen del proyecto"
+        title="proyecto 4"
+      />
+      <div class="tarjeta__contenido">
+        <h3 class="tarjeta__titulo" id="titulo_proyecto_4">I.Programaciòn</h3>
+        <span class="tarjeta__divisor"></span>
+        <p
+          class="tarjeta__parrafo scroll scroll_fino scroll_gris"
+          aria-label="descripcion de proyecto personal"
+          aria-describedby="titulo_proyecto_4"
+        >
+        Introduccion a la programaciòn.
+         A travez del Informatorio, brindado por el Ministerio de la Producciòn y Desarrollo Econòmico Sostenible del Gobierno de la provinvia de Chaco.
+        </p>
+        <a href="./assets/certificados/Titulos/Introduccion a la programacion.pdf" class="boton boton_oscuro" target="_blank">Ver Titulo</a>
+      </div>
+    </article>
+
+    <article
+        class="tarjeta"
+        aria-label="presentacion de proyecto personal"
+      >
+        <img
+          class="tarjeta__imagen"
+          src="./assets/images/proyectos/images (1).png"
+          alt="imagen del proyecto"
+          title="proyecto 4"
+        />
+        <div class="tarjeta__contenido">
+          <h3 class="tarjeta__titulo" id="titulo_proyecto_4">Programaciòn</h3>
+          <span class="tarjeta__divisor"></span>
+          <p
+            class="tarjeta__parrafo scroll scroll_fino scroll_gris"
+            aria-label="descripcion de proyecto personal"
+            aria-describedby="titulo_proyecto_4"
+          >
+          Testing Avanzado del trayecto formativo Testing de la Universidad Tecnologica Nacional .
+          </p>
+          <a href="./assets/certificados/Titulos/Introducicion a la programacion y el pensamiento comp..pdf" class="boton boton_oscuro" target="_blank">Ver Titulo</a>
+        </div>
+      </article>
+
+
+
+
+
+
+        </div>
+      </article>
+      
+ <!-- Whatsapp- Bottom -->
+ <a href="https://wa.me/+543731558595?text=Dejame el mensaje , respondo cuando estoy libre." class="float-wa" target="_blank">
+  <img src="./assets/images/logos/araslot-whatsapp.gif" width="50" height="50">
+</a>   
+
     </main>
+
         <footer class="pie_de_pagina" role="contentinfo">
       <div class="pie_de_pagina__columna">
         <h4 class="pie_de_pagina__titulo_columna">Mis redes</h4>
@@ -328,7 +466,7 @@
           </li>
           <li class="enlaces__item">
             <a class="enlaces__enlace enlaces__enlace_footer" href="#proyectos"
-              >Proyectos</a
+              >Certificados</a
             >
           </li>
         </ul>
@@ -337,5 +475,6 @@
         <p>©️Copyright 2024</p>
       </div>
     </footer>
+
   </body>
 </html>
