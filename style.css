@@ -59,6 +59,8 @@ escribamos la misma (comentarios: encabezado, principal, presentacion, articulo,
 recuerden que tambien teniamos elementos que podian repetirse en varios lugares de la pagina, los mismos 
 los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
 
+
+
 /* encabezado */
 .encabezado {
   position: absolute;
@@ -110,11 +112,14 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   );
 }
 .presentacion__contenedor_botones {
-  width: 420px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 420px; /* Limita el tamaño máximo */
   display: flex;
+  flex-wrap: wrap; /* Permite que los botones bajen a una nueva línea si es necesario */
   justify-content: center;
-  gap: 1rem;
+  gap: 1rem; /* Mantén un espacio uniforme entre botones */
 }
+
 
 .presentacion__titulo {
   font-size: var(--presentacion-titulo-tamanio);
@@ -341,15 +346,19 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 50px;
+  width: 100%; /* Ocupa el ancho máximo del contenedor */
+  max-width: 150px; /* Limita el ancho máximo */
+  height: auto; /* Permite que la altura sea dinámica */
+  padding: 10px 20px; /* Controla el espacio interno */
   font-weight: var(--texto-peso-grueso);
   text-decoration: none;
   background-color: var(--texto-primario);
   color: var(--fondo-primario);
-  border-radius: 2px;
- transition: background-color 0.3s ease, color 0.3s ease; 
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem; /* Ajusta el tamaño del texto */
 }
+
 .boton:hover {
   color: var(--texto-primario);
   background-color: var(--color-primario-apagado);
@@ -372,7 +381,7 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
    grid-template-columns: 1fr 1fr 1fr ; 
-  grid-template-rows: 1fr 1fr 1fr auto ;
+  grid-template-rows: 1fr 1fr 1fr  auto ;
   gap: 1rem;
   
 }
@@ -398,7 +407,7 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2px;
+  gap: 4px;
   background-color: var(--fondo-primario-transparente); 
  backdrop-filter: blur(4px);
    opacity: 0; 
@@ -440,7 +449,10 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   opacity: 1;
 } 
 
+
+
 /* Media queries para una mejor responsividad */
+
 @media screen and (max-width: 768px) {
   .presentacion__contenedor_info {
     flex-direction: column;
@@ -459,6 +471,10 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   }
 
 
+  .contenedor_tarjetas_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   .seccion_descripcion__info {
     max-width: 100%;
@@ -466,12 +482,33 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
     padding: 1rem;
   }
 
-  .pie_de_pagina {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
+  .button {
+    font-size: 0.8rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    padding: 8px 16px;
 }
+
+  .boton {
+    max-width: 100%; /* En pantallas pequeñas, ocupa todo el espacio disponible */
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    padding: 8px 16px; /* Reduce el padding */
+  }
+
+
+  .presentacion__contenedor_botones {
+    flex-direction: column; /* Botones en una sola columna */
+    align-items: center;
+  }
+
+  .boton {
+    width: 100%; /* Ocupa todo el ancho disponible en dispositivos pequeños */
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  }
+  
+
+}
+
+  
+
 
 
   
