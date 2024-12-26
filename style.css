@@ -50,17 +50,6 @@ body {
   
 }
 
-
-/* Hola, en este video continuaremos agregando estilos al proyecto. 
-Para esto mismo deberemos utilizar las clases que utilizamos anteriormente en las etiquetas de html. 
-Comencemos siguiendo la estructura de nuestro documento html de arriba hacia abajo. Para facilitar esto
-escribamos la misma (comentarios: encabezado, principal, presentacion, articulo, seccion descripcion,
- pie de pagina) 
-recuerden que tambien teniamos elementos que podian repetirse en varios lugares de la pagina, los mismos 
-los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
-
-
-
 /* encabezado */
 .encabezado {
   position: absolute;
@@ -359,10 +348,11 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   font-size: 1rem; /* Ajusta el tamaño del texto */
 }
 
-.boton:hover {
+.boton:hover, .boton_oscuro:hover {
   color: var(--texto-primario);
   background-color: var(--color-primario-apagado);
-} 
+}
+
 .boton_oscuro {
   color: var(--texto-primario);
   background-color: var(--color-primario);
@@ -371,17 +361,46 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   color: var(--texto-primario);
   background-color: var(--color-primario-apagado);
 } 
- .boton_oscuro:hover {
-  color: var(--texto-primario);
-  background-color: var(--color-primario-apagado);
-} 
+ 
+.contenedor_tarjetas_grid {
+  display: grid;
+ 
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.tarjeta {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta__imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tarjeta__contenido {
+  padding: 1rem;
+}
+
+
+
 
 /* tarjetas */
 .contenedor_tarjetas_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-   grid-template-columns: 1fr 1fr 1fr ; 
-  grid-template-rows: 1fr 1fr 1fr  auto ;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr ; 
+  grid-template-rows: 1fr 1fr 1fr 1fr  auto ;
   gap: 1rem;
   
 }
@@ -449,9 +468,20 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
   opacity: 1;
 } 
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
 
 
-/* Media queries para una mejor responsividad */
+/* Media queries para mejorar la responsividad */
 
 @media screen and (max-width: 768px) {
   .presentacion__contenedor_info {
@@ -461,19 +491,12 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
     gap: 2rem;
   }
 
-  .presentacion__titulo {
-    font-size: var(--presentacion-titulo-tamanio-grande);
-    text-align: center;
-  }
-
   .articulo {
     padding: 1rem 2rem;
   }
 
-
   .contenedor_tarjetas_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .seccion_descripcion__info {
@@ -482,33 +505,70 @@ los escribiremos al final (comentarios: enlaces, botones, tarjetas) */
     padding: 1rem;
   }
 
-  .button {
-    font-size: 0.8rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+  .boton {
+    max-width: 100%;
+    font-size: 0.9rem;
     padding: 8px 16px;
+  }
 }
 
+/* Media queries para pantallas más pequeñas (hasta 480px) */
+@media screen and (max-width: 480px) {
+  .presentacion__contenedor_info {
+    padding: 2%;
+    gap: 1rem;
+  }
+
+  .articulo {
+    padding: 0.5rem 1rem;
+  }
+
+  .contenedor_tarjetas_grid {
+    grid-template-columns: 1fr; /* Una tarjeta por fila */
+  }
+
+  .seccion_descripcion__info {
+    max-width: 100%;
+    max-height: 150px;
+    padding: 0.5rem;
+  }
+
+  .presentacion__titulo {
+    font-size: var(--presentacion-titulo-tamanio-grande);
+  }
+
+  .presentacion__parrafo {
+    font-size: 1rem; /* Reducir ligeramente el tamaño del texto */
+  }
+
   .boton {
-    max-width: 100%; /* En pantallas pequeñas, ocupa todo el espacio disponible */
-    font-size: 0.9rem; /* Ajusta el tamaño del texto */
-    padding: 8px 16px; /* Reduce el padding */
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    max-width: 100%; /* Botones ocupan todo el ancho */
   }
 
-
-  .presentacion__contenedor_botones {
-    flex-direction: column; /* Botones en una sola columna */
-    align-items: center;
+  .navegacion__titulo {
+    font-size: 1.5rem; /* Ajusta el tamaño del título en la navegación */
   }
 
-  .boton {
-    width: 100%; /* Ocupa todo el ancho disponible en dispositivos pequeños */
-    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  .articulo__titulo {
+    font-size: 2rem; /* Reduce el tamaño del título */
   }
-  
 
+  .tarjeta {
+    max-width: 100%; /* Asegura que las tarjetas ocupen el ancho disponible */
+  }
+
+  .tarjeta__contenido {
+    padding: 1rem;
+  }
+
+  .pie_de_pagina {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .pie_de_pagina__titulo_columna {
+    font-size: 1rem; /* Reduce ligeramente el tamaño del texto */
+  }
 }
-
-  
-
-
-
-  
