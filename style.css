@@ -622,6 +622,100 @@ body {
     .tarjeta__contenido {
       padding: 1rem;
     }
-  
+  /* Variables */
+:root {
+  --color-principal: #4caf50;
+  --color-secundario: #388e3c;
+  --texto-primario: #ffffff;
+  --fondo-primario: #222222;
+  --color-hover: #66bb6a;
+  --fuente-principal: 'Arial', sans-serif;
+  --espaciado: 16px;
+  --transicion: 0.3s ease-in-out;
 }
 
+/* Estilos globales */
+body {
+  margin: 0;
+  font-family: var(--fuente-principal);
+  background-color: var(--fondo-primario);
+  color: var(--texto-primario);
+}
+
+/* Contenedor principal */
+.contenedor {
+  padding: var(--espaciado);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Botones */
+.boton {
+  background-color: var(--color-principal);
+  color: var(--texto-primario);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color var(--transicion);
+}
+
+.boton:hover {
+  background-color: var(--color-hover);
+}
+
+/* Tarjetas */
+.tarjeta {
+  background-color: var(--color-secundario);
+  padding: var(--espaciado);
+  margin: var(--espaciado) 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Media Queries para Responsiveness */
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 8px;
+  }
+
+  .boton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .tarjeta {
+    padding: 12px;
+    margin: 8px 0;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    padding: 4px;
+  }
+
+  .boton {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .tarjeta {
+    padding: 10px;
+    margin: 6px 0;
+    width: 100%;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+
+
+
+}
